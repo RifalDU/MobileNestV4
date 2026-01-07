@@ -2,26 +2,24 @@
 
 **Database Name:** `mobilenest_db`  
 **Last Updated:** January 8, 2026  
-**Version:** 2.0
+**Version:** 2.1
 
 ---
 
 ## 📊 Database Overview
 
-Database `mobilenest_db` adalah database untuk platform e-commerce MobileNest yang mengelola data produk, pengguna, transaksi, promosi, pengiriman, dan review.
+Database `mobilenest_db` adalah database untuk platform e-commerce MobileNest yang mengelola data produk, pengguna, transaksi/pesanan, promosi, pengiriman, dan review.
 
-### 📈 Tabel Utama (12 Tables)
+### 📈 Tabel Utama (9 Tables)
 1. **admin** - Data administrator sistem
 2. **users** - Data pengguna/pelanggan
 3. **produk** - Katalog produk
 4. **promo** - Program promosi dan diskon
-5. **transaksi** - Riwayat transaksi/pesanan (deprecated, gunakan pesanan)
-6. **detail_transaksi** - Detail item dalam transaksi (deprecated)
+5. **transaksi** - Riwayat transaksi/pesanan (order + payment tracking)
+6. **detail_transaksi** - Detail item dalam transaksi
 7. **keranjang** - Shopping cart pelanggan
 8. **ulasan** - Review dan rating produk
-9. **pengiriman** - Data pengiriman/shipping ⭐ NEW
-10. **pesanan** - Riwayat pesanan pengguna ⭐ NEW
-11. **detail_pesanan** - Detail item dalam pesanan ⭐ NEW
+9. **pengiriman** - Data pengiriman/shipping ⭐
 
 ---
 
@@ -103,43 +101,63 @@ Menyimpan data promosi dan program diskon.
 
 ---
 
-### 5. **transaksi** - Tabel Transaksi/Pesanan (DEPRECATED)
-⚠️ **Deprecated** - Gunakan tabel `pesanan` untuk pesanan baru.
-
-Menyimpan riwayat transaksi/pesanan dari pengguna.
+### 5. **transaksi** - Tabel Transaksi/Pesanan
+Menyimpan informasi order dan payment tracking dari pengguna.
 
 | Kolom | Tipe Data | Constraint | Deskripsi |
 |-------|-----------|-----------|-----------|
-| `id_transaksi` | INT | PRIMARY KEY, AUTO_INCREMENT | ID unik transaksi |
+| `id_transaksi` | INT | PRIMARY KEY, AUTO_INCREMENT | ID unik transaksi/pesanan |
 | `id_user` | INT | FOREIGN KEY (users.id_user) | ID pengguna |
-| `total_harga` | DECIMAL(12,2) | NOT NULL | Total harga transaksi |
-| `status_pesanan` | VARCHAR(50) | | Status: Pending, Konfirmasi, Dikirim, Selesai |
-| `metode_pembayaran` | VARCHAR(50) | | Metode: Transfer, COD, E-wallet, dll |
-| `alamat_pengiriman` | TEXT | | Alamat tujuan pengiriman |
-| `no_resi` | VARCHAR(50) | | Nomor resi pengiriman |
-| `tanggal_transaksi` | DATETIME | DEFAULT CURRENT_TIMESTAMP | Waktu transaksi |
-| `tanggal_dikirim` | DATETIME | | Waktu barang dikirim |
-| `kode_transaksi` | VARCHAR(50) | | Kode unik transaksi |
+| `no_transaksi` | VARCHAR(50) | UNIQUE, NOT NULL | Nomor transaksi unik |
+| `subtotal` | INT | NOT NULL | Total harga produk sebelum diskon |
+| `diskon` | INT | NOT NULL DEFAULT 0 | Total diskon (Rp) |
+| `ongkir` | INT | NOT NULL DEFAULT 0 | Biaya ongkos kirim (Rp) |
+| `total_harga` | DECIMAL(12,2) | NOT NULL | Total yang harus dibayar (subtotal - diskon + ongkir) |
+| `status_pesanan` | VARCHAR(50) | DEFAULT 'Menunggu Verifikasi' | Status pesanan |
+| `metode_pembayaran` | VARCHAR(50) | NOT NULL | Metode pembayaran (transfer, cod, ewallet, dll) |
+| `bukti_pembayaran` | VARCHAR(255) | | Path/URL bukti pembayaran |
+| `tanggal_transaksi` | DATETIME | DEFAULT CURRENT_TIMESTAMP | Waktu transaksi dibuat |
+| `tanggal_pembayaran` | DATETIME | | Tanggal transaksi dibayar |
+| `tanggal_konfirmasi` | DATETIME | | Tanggal pembayaran dikonfirmasi/diverifikasi |
 | `catatan_user` | TEXT | | Catatan/note dari pembeli |
-| `bukti_pembayaran` | VARCHAR(255) | | Path bukti pembayaran |
+| `created_at` | TIMESTAMP | DEFAULT CURRENT_TIMESTAMP | Waktu record dibuat |
+| `updated_at` | TIMESTAMP | DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP | Waktu record terakhir diupdate |
+
+**Index:**
+- `idx_id_user` (id_user)
+- `idx_no_transaksi` (no_transaksi)
+- `idx_status` (status_pesanan)
+- `idx_tanggal` (tanggal_transaksi)
 
 **Sample Data:** Kosong (0 rows)
 
+**Status Pesanan Values:**
+- `Menunggu Verifikasi` - Menunggu verifikasi pembayaran dari admin
+- `Verified` - Pembayaran sudah diverifikasi, siap dikirim
+- `Dalam Pengiriman` - Sedang dikirim ke user
+- `Diterima` - Sudah diterima oleh user
+- `Selesai` - Pesanan selesai dan transaksi lengkap
+- `Dibatalkan` - Pesanan dibatalkan
+
 ---
 
-### 6. **detail_transaksi** - Tabel Detail Transaksi (DEPRECATED)
-⚠️ **Deprecated** - Gunakan tabel `detail_pesanan` untuk detail pesanan baru.
-
-Menyimpan breakdown item/produk dalam setiap transaksi.
+### 6. **detail_transaksi** - Tabel Detail Transaksi
+Menyimpan breakdown item/produk dalam setiap transaksi/pesanan.
 
 | Kolom | Tipe Data | Constraint | Deskripsi |
 |-------|-----------|-----------|-----------|
-| `id_detail` | INT | PRIMARY KEY, AUTO_INCREMENT | ID detail item |
+| `id_detail` | INT | PRIMARY KEY, AUTO_INCREMENT | ID unik detail item |
 | `id_transaksi` | INT | FOREIGN KEY (transaksi.id_transaksi) | ID transaksi referensi |
 | `id_produk` | INT | FOREIGN KEY (produk.id_produk) | ID produk yang dibeli |
-| `jumlah` | INT | NOT NULL | Jumlah item yang dibeli |
-| `harga_satuan` | DECIMAL(10,2) | NOT NULL | Harga per unit saat pembelian |
-| `subtotal` | DECIMAL(12,2) | NOT NULL | Total untuk item ini (jumlah × harga_satuan) |
+| `nama_produk` | VARCHAR(255) | NOT NULL | Nama produk (snapshot saat pembelian) |
+| `harga_satuan` | INT | NOT NULL | Harga per unit saat pembelian (Rp) |
+| `jumlah` | INT | NOT NULL | Jumlah/quantity yang dibeli |
+| `subtotal` | DECIMAL(12,2) | NOT NULL | Total untuk item ini (harga_satuan × jumlah) |
+| `created_at` | TIMESTAMP | DEFAULT CURRENT_TIMESTAMP | Waktu record dibuat |
+
+**Index:**
+- `idx_id_transaksi` (id_transaksi)
+- `idx_id_produk` (id_produk)
 
 **Sample Data:** Kosong (0 rows)
 
@@ -176,12 +194,13 @@ Menyimpan review dan rating dari pengguna terhadap produk.
 
 ---
 
-### 9. **pengiriman** - Tabel Pengiriman/Shipping ⭐ NEW
-Menyimpan informasi detail pengiriman untuk setiap pesanan.
+### 9. **pengiriman** - Tabel Pengiriman/Shipping ⭐
+Menyimpan informasi detail pengiriman untuk setiap transaksi/pesanan.
 
 | Kolom | Tipe Data | Constraint | Deskripsi |
 |-------|-----------|-----------|-----------|
 | `id_pengiriman` | INT | PRIMARY KEY, AUTO_INCREMENT | ID unik pengiriman |
+| `id_transaksi` | INT | FOREIGN KEY (transaksi.id_transaksi) | ID transaksi referensi |
 | `id_user` | INT | FOREIGN KEY (users.id_user) | ID pengguna |
 | `no_pengiriman` | VARCHAR(50) | UNIQUE, NOT NULL | Nomor tracking pengiriman |
 | `nama_penerima` | VARCHAR(100) | NOT NULL | Nama orang yang menerima |
@@ -193,9 +212,8 @@ Menyimpan informasi detail pengiriman untuk setiap pesanan.
 | `kode_pos` | VARCHAR(10) | NOT NULL | Kode pos |
 | `alamat_lengkap` | TEXT | NOT NULL | Alamat lengkap pengiriman |
 | `metode_pengiriman` | ENUM('regular', 'express', 'same_day') | DEFAULT 'regular' | Metode/kelas pengiriman |
-| `ongkir` | INT | NOT NULL DEFAULT 0 | Biaya ongkos kirim (Rp) |
 | `catatan` | TEXT | | Catatan tambahan untuk kurir |
-| `status_pengiriman` | VARCHAR(50) | DEFAULT 'Menunggu Verifikasi Pembayaran' | Status pengiriman |
+| `status_pengiriman` | VARCHAR(50) | DEFAULT 'Menunggu Pickup' | Status pengiriman |
 | `tanggal_pengiriman` | DATETIME | NOT NULL | Tanggal estimasi pengiriman |
 | `tanggal_konfirmasi` | DATETIME | | Tanggal barang dikonfirmasi diterima |
 | `tanggal_diterima` | DATETIME | | Tanggal barang benar-benar diterima |
@@ -203,6 +221,7 @@ Menyimpan informasi detail pengiriman untuk setiap pesanan.
 | `updated_at` | TIMESTAMP | DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP | Waktu record terakhir diupdate |
 
 **Index:**
+- `idx_id_transaksi` (id_transaksi)
 - `idx_id_user` (id_user)
 - `idx_no_pengiriman` (no_pengiriman)
 - `idx_status` (status_pengiriman)
@@ -210,7 +229,6 @@ Menyimpan informasi detail pengiriman untuk setiap pesanan.
 **Sample Data:** Kosong (0 rows)
 
 **Status Pengiriman Values:**
-- `Menunggu Verifikasi Pembayaran` - Menunggu verifikasi pembayaran dari user
 - `Menunggu Pickup` - Menunggu pickup dari kurir
 - `Dalam Pengiriman` - Sedang dalam perjalanan
 - `Tiba di Tujuan` - Sudah tiba di lokasi tujuan
@@ -219,95 +237,24 @@ Menyimpan informasi detail pengiriman untuk setiap pesanan.
 
 ---
 
-### 10. **pesanan** - Tabel Pesanan/Order ⭐ NEW
-Menyimpan informasi detail pesanan dari user.
-
-| Kolom | Tipe Data | Constraint | Deskripsi |
-|-------|-----------|-----------|-----------|
-| `id_pesanan` | INT | PRIMARY KEY, AUTO_INCREMENT | ID unik pesanan |
-| `id_user` | INT | FOREIGN KEY (users.id_user) | ID pengguna yang pesan |
-| `id_pengiriman` | INT | FOREIGN KEY (pengiriman.id_pengiriman) | ID data pengiriman |
-| `no_pesanan` | VARCHAR(50) | UNIQUE, NOT NULL | Nomor pesanan unik |
-| `subtotal` | INT | NOT NULL | Total harga produk sebelum diskon |
-| `diskon` | INT | NOT NULL DEFAULT 0 | Total diskon (Rp) |
-| `ongkir` | INT | NOT NULL | Biaya ongkos kirim (Rp) |
-| `total_bayar` | INT | NOT NULL | Total yang harus dibayar (subtotal - diskon + ongkir) |
-| `status_pesanan` | VARCHAR(50) | DEFAULT 'Menunggu Verifikasi' | Status pesanan |
-| `metode_pembayaran` | VARCHAR(50) | NOT NULL | Metode pembayaran (transfer, cod, ewallet, dll) |
-| `bukti_pembayaran` | VARCHAR(255) | | Path/URL bukti pembayaran |
-| `tanggal_pesanan` | DATETIME | NOT NULL | Tanggal pesanan dibuat |
-| `tanggal_pembayaran` | DATETIME | | Tanggal pesanan dibayar |
-| `tanggal_pengiriman` | DATETIME | | Tanggal pesanan dikirim |
-| `tanggal_diterima` | DATETIME | | Tanggal pesanan diterima |
-| `catatan` | TEXT | | Catatan tambahan dari user |
-| `created_at` | TIMESTAMP | DEFAULT CURRENT_TIMESTAMP | Waktu record dibuat |
-| `updated_at` | TIMESTAMP | DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP | Waktu record terakhir diupdate |
-
-**Index:**
-- `idx_id_user` (id_user)
-- `idx_id_pengiriman` (id_pengiriman)
-- `idx_no_pesanan` (no_pesanan)
-- `idx_status` (status_pesanan)
-
-**Sample Data:** Kosong (0 rows)
-
-**Status Pesanan Values:**
-- `Menunggu Verifikasi` - Menunggu verifikasi dari admin
-- `Menunggu Pembayaran` - Menunggu pembayaran dari user
-- `Menunggu Pengiriman` - Pembayaran sudah diterima, menunggu pickup
-- `Dalam Pengiriman` - Sedang dikirim ke user
-- `Diterima` - Sudah diterima oleh user
-- `Selesai` - Pesanan selesai dan transaksi lengkap
-- `Dibatalkan` - Pesanan dibatalkan
-
----
-
-### 11. **detail_pesanan** - Tabel Detail Pesanan ⭐ NEW
-Menyimpan breakdown item/produk dalam setiap pesanan.
-
-| Kolom | Tipe Data | Constraint | Deskripsi |
-|-------|-----------|-----------|-----------|
-| `id_detail_pesanan` | INT | PRIMARY KEY, AUTO_INCREMENT | ID unik detail pesanan |
-| `id_pesanan` | INT | FOREIGN KEY (pesanan.id_pesanan) | ID pesanan referensi |
-| `id_produk` | INT | FOREIGN KEY (produk.id_produk) | ID produk yang dibeli |
-| `nama_produk` | VARCHAR(255) | NOT NULL | Nama produk (snapshot saat pembelian) |
-| `harga` | INT | NOT NULL | Harga per unit saat pembelian (Rp) |
-| `qty` | INT | NOT NULL | Jumlah/quantity yang dibeli |
-| `subtotal` | INT | NOT NULL | Total untuk item ini (harga × qty) |
-| `created_at` | TIMESTAMP | DEFAULT CURRENT_TIMESTAMP | Waktu record dibuat |
-
-**Index:**
-- `idx_id_pesanan` (id_pesanan)
-- `idx_id_produk` (id_produk)
-
-**Sample Data:** Kosong (0 rows)
-
----
-
 ## 🔄 Relationships (Foreign Keys)
 
 ```
-users ──┬──→ transaksi (DEPRECATED)
+users ──┬──→ transaksi (order + payment tracking)
         ├──→ keranjang
         ├──→ ulasan
-        ├──→ pengiriman ⭐ NEW
-        └──→ pesanan ⭐ NEW
+        └──→ pengiriman (untuk tracking)
 
 admin ─→ (standalone table)
 
-produk ──┬──→ detail_transaksi (DEPRECATED)
+produk ──┬──→ detail_transaksi (items breakdown)
          ├──→ keranjang
-         ├──→ ulasan
-         └──→ detail_pesanan ⭐ NEW
+         └──→ ulasan
 
-transaksi ──→ detail_transaksi (DEPRECATED)
+transaksi ──┬──→ detail_transaksi (items in order)
+            └──→ pengiriman (shipping info)
 
-pengiriman ⭐ NEW (standalone, referenced by pesanan)
-
-pesanan ⭐ NEW ──┬──→ pengiriman
-                └──→ detail_pesanan
-
-detail_pesanan ⭐ NEW ──→ pesanan
+pengiriman → transaksi (linked via id_transaksi)
 ```
 
 **Relationship Diagram:**
@@ -316,16 +263,20 @@ detail_pesanan ⭐ NEW ──→ pesanan
 │  users  │
 └────┬────┘
      │
-     ├─→ pesanan (id_user) ⭐ NEW
+     ├─→ transaksi (id_user)
      │       │
-     │       ├─→ pengiriman (id_pengiriman) ⭐ NEW
-     │       └─→ detail_pesanan (id_pesanan) ⭐ NEW
+     │       ├─→ detail_transaksi (id_transaksi)
+     │       │       └─→ produk (id_produk)
+     │       │
+     │       └─→ pengiriman (id_transaksi)
      │
-     ├─→ pengiriman (id_user) ⭐ NEW
+     ├─→ pengiriman (id_user)
      │
      ├─→ keranjang (id_user)
+     │       └─→ produk (id_produk)
      │
      └─→ ulasan (id_user)
+             └─→ produk (id_produk)
 
 ┌─────────┐
 │  produk │
@@ -335,7 +286,7 @@ detail_pesanan ⭐ NEW ──→ pesanan
      │
      ├─→ ulasan (id_produk)
      │
-     └─→ detail_pesanan (id_produk) ⭐ NEW
+     └─→ detail_transaksi (id_produk)
 ```
 
 ---
@@ -353,10 +304,12 @@ CREATE INDEX idx_users_email ON users(email);
 CREATE INDEX idx_produk_kategori ON produk(kategori);
 CREATE INDEX idx_produk_status ON produk(status_produk);
 
--- Transaction queries (OLD)
+-- Order/Transaction queries
 CREATE INDEX idx_transaksi_id_user ON transaksi(id_user);
 CREATE INDEX idx_transaksi_status ON transaksi(status_pesanan);
 CREATE INDEX idx_transaksi_tanggal ON transaksi(tanggal_transaksi);
+CREATE INDEX idx_detail_transaksi_id_transaksi ON detail_transaksi(id_transaksi);
+CREATE INDEX idx_detail_transaksi_id_produk ON detail_transaksi(id_produk);
 
 -- Cart operations
 CREATE INDEX idx_keranjang_id_user ON keranjang(id_user);
@@ -364,15 +317,11 @@ CREATE INDEX idx_keranjang_id_user ON keranjang(id_user);
 -- Review queries
 CREATE INDEX idx_ulasan_id_produk ON ulasan(id_produk);
 
--- NEW: Order/Pengiriman queries ⭐
-CREATE INDEX idx_pesanan_id_user ON pesanan(id_user);
-CREATE INDEX idx_pesanan_status ON pesanan(status_pesanan);
-CREATE INDEX idx_pesanan_tanggal ON pesanan(tanggal_pesanan);
+-- Shipping queries
+CREATE INDEX idx_pengiriman_id_transaksi ON pengiriman(id_transaksi);
 CREATE INDEX idx_pengiriman_id_user ON pengiriman(id_user);
 CREATE INDEX idx_pengiriman_status ON pengiriman(status_pengiriman);
 CREATE INDEX idx_pengiriman_tanggal ON pengiriman(tanggal_pengiriman);
-CREATE INDEX idx_detail_pesanan_id_pesanan ON detail_pesanan(id_pesanan);
-CREATE INDEX idx_detail_pesanan_id_produk ON detail_pesanan(id_produk);
 ```
 
 ### Query Optimization Tips
@@ -382,7 +331,7 @@ CREATE INDEX idx_detail_pesanan_id_produk ON detail_pesanan(id_produk);
 3. **Select only needed columns** - jangan SELECT *
 4. **Use LIMIT** untuk pagination
 5. **Index frequently queried columns** - seperti status, user_id, dates
-6. **Denormalize jika diperlukan** - contoh: simpan nama_produk di detail_pesanan
+6. **Denormalize jika diperlukan** - contoh: simpan nama_produk di detail_transaksi
 
 ---
 
@@ -424,7 +373,7 @@ SET CHARACTER SET utf8mb4;
 ### 4. Insert Sample Data
 ```sql
 -- Insert users, products, promotions
--- Keep new tables (pengiriman, pesanan, detail_pesanan) empty initially
+-- Keep transaction tables empty initially for testing
 ```
 
 ### 5. Verify Connection
@@ -461,10 +410,10 @@ mysqldump -u root -p --all-databases > full_backup_$(date +%Y%m%d).sql
 ### Regular Maintenance
 ```sql
 -- Check table integrity
-CHECK TABLE users, produk, pesanan, pengiriman, detail_pesanan;
+CHECK TABLE users, produk, transaksi, detail_transaksi, pengiriman;
 
 -- Optimize tables
-OPTIMIZE TABLE users, produk, pesanan, pengiriman, detail_pesanan;
+OPTIMIZE TABLE users, produk, transaksi, detail_transaksi, pengiriman;
 
 -- Show table sizes
 SELECT 
@@ -486,73 +435,164 @@ ORDER BY size_mb DESC;
 ## 📊 Data Statistics
 
 | Tabel | Rows | Purpose |
-|-------|------|---------|
+|-------|------|----------|
 | users | 6 | User accounts |
 | admin | 1 | Admin accounts |
 | produk | 13 | Product catalog |
 | promo | 2 | Active promotions |
-| transaksi | 0 | OLD: Order history |
-| detail_transaksi | 0 | OLD: Order items |
+| transaksi | 0 | Order + Payment tracking |
+| detail_transaksi | 0 | Order items |
 | keranjang | 0 | Shopping carts |
 | ulasan | 0 | Product reviews |
-| pengiriman | 0 | Shipping info ⭐ NEW |
-| pesanan | 0 | Order history ⭐ NEW |
-| detail_pesanan | 0 | Order items ⭐ NEW |
+| pengiriman | 0 | Shipping info |
 
-**Total Tables:** 11 active + 2 deprecated = 13 tables
+**Total Tables:** 9 active tables
 
 ---
 
-## 🔄 Migration Guide (Old to New)
+## 🔄 Common Workflow: Keranjang → Pengiriman → Pembayaran
 
-Jika migrasi dari `transaksi` ke `pesanan`:
-
+### Step 1: User Add Items to Cart
 ```sql
--- Step 1: Backup data lama
-CREATE TABLE transaksi_backup AS SELECT * FROM transaksi;
+INSERT INTO keranjang (id_user, id_produk, jumlah)
+VALUES (?, ?, ?);
+```
 
--- Step 2: Migrate data (contoh)
-INSERT INTO pesanan (id_user, no_pesanan, subtotal, ongkir, total_bayar, 
-                     status_pesanan, metode_pembayaran, bukti_pembayaran,
-                     tanggal_pesanan, created_at)
-SELECT id_user, kode_transaksi, total_harga, 0, total_harga,
-       status_pesanan, metode_pembayaran, bukti_pembayaran,
-       tanggal_transaksi, tanggal_transaksi
-FROM transaksi;
+### Step 2: User Checkout (Create Transaction)
+```sql
+-- Calculate totals from cart
+SET @subtotal = (SELECT SUM(k.jumlah * p.harga) 
+                 FROM keranjang k 
+                 JOIN produk p ON k.id_produk = p.id_produk 
+                 WHERE k.id_user = ?);
+SET @diskon = 0; -- Apply promo if any
+SET @ongkir = 0; -- Will be set after shipping method chosen
+SET @total = @subtotal - @diskon + @ongkir;
 
--- Step 3: Migrate detail items
-INSERT INTO detail_pesanan (id_pesanan, id_produk, nama_produk, harga, qty, subtotal, created_at)
-SELECT dt.id_transaksi, dt.id_produk, p.nama_produk, 
-       dt.harga_satuan, dt.jumlah, dt.subtotal, dt.tanggal_dibuat
-FROM detail_transaksi dt
-JOIN produk p ON dt.id_produk = p.id_produk;
+-- Create transaction
+INSERT INTO transaksi (id_user, no_transaksi, subtotal, diskon, ongkir, total_harga, status_pesanan, metode_pembayaran)
+VALUES (?, CONCAT('TRX-', DATE_FORMAT(NOW(), '%Y%m%d%H%i%s')), @subtotal, @diskon, @ongkir, @total, 'Menunggu Verifikasi', '');
 
--- Step 4: Verify data
-SELECT COUNT(*) FROM pesanan;
-SELECT COUNT(*) FROM detail_pesanan;
+SET @id_transaksi = LAST_INSERT_ID();
 
--- Step 5: Keep old tables for reference (or drop if sure)
--- DROP TABLE detail_transaksi, transaksi;
+-- Copy items from cart to detail_transaksi
+INSERT INTO detail_transaksi (id_transaksi, id_produk, nama_produk, harga_satuan, jumlah, subtotal)
+SELECT @id_transaksi, p.id_produk, p.nama_produk, p.harga, k.jumlah, (p.harga * k.jumlah)
+FROM keranjang k
+JOIN produk p ON k.id_produk = p.id_produk
+WHERE k.id_user = ?;
+
+-- Clear cart
+DELETE FROM keranjang WHERE id_user = ?;
+```
+
+### Step 3: User Input Shipping Address & Method
+```sql
+-- Create shipping record
+INSERT INTO pengiriman (id_transaksi, id_user, no_pengiriman, nama_penerima, no_telepon, email, 
+                       provinsi, kota, kecamatan, kode_pos, alamat_lengkap, metode_pengiriman)
+VALUES (?, ?, CONCAT('SHIP-', DATE_FORMAT(NOW(), '%Y%m%d%H%i%s')), ?, ?, ?, ?, ?, ?, ?, ?, ?);
+
+-- Update ongkir based on shipping method
+UPDATE transaksi 
+SET ongkir = ?, total_harga = (subtotal - diskon + ?)
+WHERE id_transaksi = ?;
+```
+
+### Step 4: User Select Payment Method & Upload Proof
+```sql
+UPDATE transaksi
+SET metode_pembayaran = ?, bukti_pembayaran = ?, status_pesanan = 'Menunggu Verifikasi'
+WHERE id_transaksi = ?;
+```
+
+### Step 5: Admin Verify Payment
+```sql
+UPDATE transaksi
+SET status_pesanan = 'Verified', tanggal_konfirmasi = NOW()
+WHERE id_transaksi = ?;
+
+UPDATE pengiriman
+SET status_pengiriman = 'Menunggu Pickup'
+WHERE id_transaksi = ?;
+```
+
+### Step 6: Kurir Pickup & Kirim
+```sql
+UPDATE pengiriman
+SET status_pengiriman = 'Dalam Pengiriman', tanggal_pengiriman = NOW()
+WHERE id_transaksi = ?;
+
+UPDATE transaksi
+SET status_pesanan = 'Dalam Pengiriman'
+WHERE id_transaksi = ?;
+```
+
+### Step 7: Customer Receive
+```sql
+UPDATE pengiriman
+SET status_pengiriman = 'Diterima', tanggal_diterima = NOW()
+WHERE id_transaksi = ?;
+
+UPDATE transaksi
+SET status_pesanan = 'Diterima'
+WHERE id_transaksi = ?;
+```
+
+### Step 8: Mark Transaction Complete
+```sql
+UPDATE transaksi
+SET status_pesanan = 'Selesai'
+WHERE id_transaksi = ?;
 ```
 
 ---
 
-## 🔐 Access Control Example
+## 🔐 Query Examples
 
-```php
-// Restrict access to sensitive queries
-function get_pesanan($pesanan_id, $user_id) {
-    global $conn;
-    
-    // Verify user owns this order
-    $stmt = $conn->prepare("
-        SELECT p.* FROM pesanan p
-        WHERE p.id_pesanan = ? AND p.id_user = ?
-    ");
-    $stmt->bind_param('ii', $pesanan_id, $user_id);
-    $stmt->execute();
-    return $stmt->get_result()->fetch_assoc();
-}
+### Get All Orders from User
+```sql
+SELECT t.*, p.status_pengiriman
+FROM transaksi t
+LEFT JOIN pengiriman p ON t.id_transaksi = p.id_transaksi
+WHERE t.id_user = ?
+ORDER BY t.tanggal_transaksi DESC;
+```
+
+### Get Order Details with Items
+```sql
+SELECT 
+    t.id_transaksi, t.no_transaksi, t.total_harga, t.status_pesanan,
+    dt.id_produk, dt.nama_produk, dt.harga_satuan, dt.jumlah, dt.subtotal
+FROM transaksi t
+JOIN detail_transaksi dt ON t.id_transaksi = dt.id_transaksi
+WHERE t.id_transaksi = ?
+ORDER BY dt.id_detail;
+```
+
+### Get Pending Shipments
+```sql
+SELECT p.*, t.no_transaksi, u.nama_lengkap
+FROM pengiriman p
+JOIN transaksi t ON p.id_transaksi = t.id_transaksi
+JOIN users u ON p.id_user = u.id_user
+WHERE p.status_pengiriman IN ('Menunggu Pickup', 'Dalam Pengiriman')
+ORDER BY p.tanggal_pengiriman ASC;
+```
+
+### Get Revenue Report
+```sql
+SELECT 
+    DATE(tanggal_transaksi) as tanggal,
+    COUNT(id_transaksi) as jumlah_order,
+    SUM(total_harga) as total_revenue,
+    SUM(subtotal) as total_produk,
+    SUM(diskon) as total_diskon,
+    SUM(ongkir) as total_ongkir
+FROM transaksi
+WHERE status_pesanan IN ('Verified', 'Dalam Pengiriman', 'Diterima', 'Selesai')
+GROUP BY DATE(tanggal_transaksi)
+ORDER BY tanggal DESC;
 ```
 
 ---
@@ -560,13 +600,14 @@ function get_pesanan($pesanan_id, $user_id) {
 ## 📝 Version History
 
 | Version | Date | Changes |
-|---------|------|---------|
+|---------|------|----------|
 | 1.0 | Dec 30, 2025 | Initial schema with 8 tables |
-| 2.0 | Jan 8, 2026 | Added pengiriman, pesanan, detail_pesanan tables; improved structure |
+| 2.0 | Jan 8, 2026 | Added pengiriman table for shipping info |
+| 2.1 | Jan 8, 2026 | Removed duplicate pesanan & detail_pesanan; use transaksi family; added workflow examples & query examples |
 
 ---
 
 **Created by:** AI Assistant  
 **For Project:** MobileNest E-Commerce Platform  
-**Last Updated:** January 8, 2026, 3:39 AM +07  
-**Status:** ✅ Documentation Updated & Ready for Integration
+**Last Updated:** January 8, 2026, 3:58 AM +07  
+**Status:** ✅ Updated - Optimized for Production Use
