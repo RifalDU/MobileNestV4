@@ -1,0 +1,1054 @@
+[2026-01-07 20:10:05] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:10:05] Getting current user ID...
+[2026-01-07 20:10:05] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:10:05] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:10:05] Using logged-in user ID: 5
+[2026-01-07 20:10:05] Final user_id: 5
+[2026-01-07 20:10:05] Action: count
+[2026-01-07 20:10:05] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:10:05] Getting current user ID...
+[2026-01-07 20:10:05] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:10:05] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:10:05] Using logged-in user ID: 5
+[2026-01-07 20:10:05] Final user_id: 5
+[2026-01-07 20:10:05] Action: count
+[2026-01-07 20:10:15] === NEW REQUEST ==={"action":"get"}
+[2026-01-07 20:10:15] Getting current user ID...
+[2026-01-07 20:10:15] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:10:15] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:10:15] Using logged-in user ID: 5
+[2026-01-07 20:10:15] Final user_id: 5
+[2026-01-07 20:10:15] Action: get
+[2026-01-07 20:10:15] Getting cart items for user_id: 5
+[2026-01-07 20:10:15] Cart items count: 0
+[2026-01-07 20:10:15] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:10:15] Getting current user ID...
+[2026-01-07 20:10:15] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:10:15] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:10:15] Using logged-in user ID: 5
+[2026-01-07 20:10:15] Final user_id: 5
+[2026-01-07 20:10:15] Action: count
+[2026-01-07 20:10:15] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:10:15] Getting current user ID...
+[2026-01-07 20:10:15] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:10:15] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:10:15] Using logged-in user ID: 5
+[2026-01-07 20:10:15] Final user_id: 5
+[2026-01-07 20:10:15] Action: count
+[2026-01-07 20:10:17] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:10:17] Getting current user ID...
+[2026-01-07 20:10:17] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:10:17] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:10:17] Using logged-in user ID: 5
+[2026-01-07 20:10:17] Final user_id: 5
+[2026-01-07 20:10:17] Action: count
+[2026-01-07 20:10:17] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:10:17] Getting current user ID...
+[2026-01-07 20:10:17] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:10:17] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:10:17] Using logged-in user ID: 5
+[2026-01-07 20:10:17] Final user_id: 5
+[2026-01-07 20:10:17] Action: count
+[2026-01-07 20:12:16] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:12:16] Getting current user ID...
+[2026-01-07 20:12:16] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:12:16] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:12:16] Using logged-in user ID: 5
+[2026-01-07 20:12:16] Final user_id: 5
+[2026-01-07 20:12:16] Action: count
+[2026-01-07 20:12:16] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:12:16] Getting current user ID...
+[2026-01-07 20:12:16] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:12:16] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:12:16] Using logged-in user ID: 5
+[2026-01-07 20:12:16] Final user_id: 5
+[2026-01-07 20:12:16] Action: count
+[2026-01-07 20:12:18] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:12:18] Getting current user ID...
+[2026-01-07 20:12:18] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:12:18] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:12:18] Using logged-in user ID: 5
+[2026-01-07 20:12:18] Final user_id: 5
+[2026-01-07 20:12:18] Action: count
+[2026-01-07 20:12:18] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:12:18] Getting current user ID...
+[2026-01-07 20:12:18] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:12:18] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:12:18] Using logged-in user ID: 5
+[2026-01-07 20:12:18] Final user_id: 5
+[2026-01-07 20:12:18] Action: count
+[2026-01-07 20:12:18] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:12:18] Getting current user ID...
+[2026-01-07 20:12:18] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:12:18] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:12:18] Using logged-in user ID: 5
+[2026-01-07 20:12:18] Final user_id: 5
+[2026-01-07 20:12:18] Action: count
+[2026-01-07 20:12:18] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:12:18] Getting current user ID...
+[2026-01-07 20:12:18] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:12:18] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:12:18] Using logged-in user ID: 5
+[2026-01-07 20:12:18] Final user_id: 5
+[2026-01-07 20:12:18] Action: count
+[2026-01-07 20:12:25] === NEW REQUEST ==={"action":"get"}
+[2026-01-07 20:12:25] Getting current user ID...
+[2026-01-07 20:12:25] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:12:25] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:12:25] Using logged-in user ID: 5
+[2026-01-07 20:12:25] Final user_id: 5
+[2026-01-07 20:12:25] Action: get
+[2026-01-07 20:12:25] Getting cart items for user_id: 5
+[2026-01-07 20:12:25] Cart items count: 0
+[2026-01-07 20:12:25] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:12:25] Getting current user ID...
+[2026-01-07 20:12:25] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:12:25] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:12:25] Using logged-in user ID: 5
+[2026-01-07 20:12:25] Final user_id: 5
+[2026-01-07 20:12:25] Action: count
+[2026-01-07 20:12:25] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:12:25] Getting current user ID...
+[2026-01-07 20:12:25] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:12:25] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:12:25] Using logged-in user ID: 5
+[2026-01-07 20:12:25] Final user_id: 5
+[2026-01-07 20:12:25] Action: count
+[2026-01-07 20:12:26] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:12:26] Getting current user ID...
+[2026-01-07 20:12:26] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:12:26] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:12:26] Using logged-in user ID: 5
+[2026-01-07 20:12:26] Final user_id: 5
+[2026-01-07 20:12:26] Action: count
+[2026-01-07 20:12:26] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:12:26] Getting current user ID...
+[2026-01-07 20:12:26] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:12:26] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:12:26] Using logged-in user ID: 5
+[2026-01-07 20:12:26] Final user_id: 5
+[2026-01-07 20:12:26] Action: count
+[2026-01-07 20:12:34] === NEW REQUEST ==={"action":"get"}
+[2026-01-07 20:12:34] Getting current user ID...
+[2026-01-07 20:12:34] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:12:34] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:12:34] Using logged-in user ID: 5
+[2026-01-07 20:12:34] Final user_id: 5
+[2026-01-07 20:12:34] Action: get
+[2026-01-07 20:12:34] Getting cart items for user_id: 5
+[2026-01-07 20:12:34] Cart items count: 0
+[2026-01-07 20:12:34] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:12:34] Getting current user ID...
+[2026-01-07 20:12:34] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:12:34] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:12:34] Using logged-in user ID: 5
+[2026-01-07 20:12:34] Final user_id: 5
+[2026-01-07 20:12:34] Action: count
+[2026-01-07 20:12:34] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:12:34] Getting current user ID...
+[2026-01-07 20:12:34] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:12:34] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:12:34] Using logged-in user ID: 5
+[2026-01-07 20:12:34] Final user_id: 5
+[2026-01-07 20:12:34] Action: count
+[2026-01-07 20:13:34] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:13:34] Getting current user ID...
+[2026-01-07 20:13:34] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:13:34] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:13:34] Using logged-in user ID: 5
+[2026-01-07 20:13:34] Final user_id: 5
+[2026-01-07 20:13:34] Action: count
+[2026-01-07 20:13:34] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:13:34] Getting current user ID...
+[2026-01-07 20:13:34] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:13:34] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:13:34] Using logged-in user ID: 5
+[2026-01-07 20:13:34] Final user_id: 5
+[2026-01-07 20:13:34] Action: count
+[2026-01-07 20:14:42] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:14:42] Getting current user ID...
+[2026-01-07 20:14:42] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:14:42] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:14:42] Using logged-in user ID: 5
+[2026-01-07 20:14:42] Final user_id: 5
+[2026-01-07 20:14:42] Action: count
+[2026-01-07 20:14:42] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:14:42] Getting current user ID...
+[2026-01-07 20:14:42] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:14:42] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:14:42] Using logged-in user ID: 5
+[2026-01-07 20:14:42] Final user_id: 5
+[2026-01-07 20:14:42] Action: count
+[2026-01-07 20:15:33] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:15:33] Getting current user ID...
+[2026-01-07 20:15:33] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:15:33] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:15:33] Using logged-in user ID: 5
+[2026-01-07 20:15:33] Final user_id: 5
+[2026-01-07 20:15:33] Action: count
+[2026-01-07 20:15:33] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:15:33] Getting current user ID...
+[2026-01-07 20:15:33] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:15:33] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:15:33] Using logged-in user ID: 5
+[2026-01-07 20:15:33] Final user_id: 5
+[2026-01-07 20:15:33] Action: count
+[2026-01-07 20:15:36] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:15:36] Getting current user ID...
+[2026-01-07 20:15:36] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:15:36] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:15:36] Using logged-in user ID: 5
+[2026-01-07 20:15:36] Final user_id: 5
+[2026-01-07 20:15:36] Action: count
+[2026-01-07 20:15:36] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:15:36] Getting current user ID...
+[2026-01-07 20:15:36] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:15:36] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:15:36] Using logged-in user ID: 5
+[2026-01-07 20:15:36] Final user_id: 5
+[2026-01-07 20:15:36] Action: count
+[2026-01-07 20:15:39] === NEW REQUEST ==={"action":"get"}
+[2026-01-07 20:15:39] Getting current user ID...
+[2026-01-07 20:15:39] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:15:39] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:15:39] Using logged-in user ID: 5
+[2026-01-07 20:15:39] Final user_id: 5
+[2026-01-07 20:15:39] Action: get
+[2026-01-07 20:15:39] Getting cart items for user_id: 5
+[2026-01-07 20:15:39] Cart items count: 0
+[2026-01-07 20:15:39] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:15:39] Getting current user ID...
+[2026-01-07 20:15:39] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:15:39] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:15:39] Using logged-in user ID: 5
+[2026-01-07 20:15:39] Final user_id: 5
+[2026-01-07 20:15:39] Action: count
+[2026-01-07 20:15:39] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:15:39] Getting current user ID...
+[2026-01-07 20:15:39] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:15:39] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:15:39] Using logged-in user ID: 5
+[2026-01-07 20:15:39] Final user_id: 5
+[2026-01-07 20:15:39] Action: count
+[2026-01-07 20:15:40] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:15:40] Getting current user ID...
+[2026-01-07 20:15:40] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:15:40] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:15:40] Using logged-in user ID: 5
+[2026-01-07 20:15:40] Final user_id: 5
+[2026-01-07 20:15:40] Action: count
+[2026-01-07 20:15:40] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:15:40] Getting current user ID...
+[2026-01-07 20:15:40] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:15:40] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:15:40] Using logged-in user ID: 5
+[2026-01-07 20:15:40] Final user_id: 5
+[2026-01-07 20:15:40] Action: count
+[2026-01-07 20:15:42] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:15:42] Getting current user ID...
+[2026-01-07 20:15:42] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:15:42] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:15:42] Using logged-in user ID: 5
+[2026-01-07 20:15:42] Final user_id: 5
+[2026-01-07 20:15:42] Action: count
+[2026-01-07 20:15:42] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:15:42] Getting current user ID...
+[2026-01-07 20:15:42] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:15:42] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:15:42] Using logged-in user ID: 5
+[2026-01-07 20:15:42] Final user_id: 5
+[2026-01-07 20:15:42] Action: count
+[2026-01-07 20:15:43] === NEW REQUEST ==={"action":"add"}
+[2026-01-07 20:15:43] Getting current user ID...
+[2026-01-07 20:15:43] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:15:43] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:15:43] Using logged-in user ID: 5
+[2026-01-07 20:15:43] Final user_id: 5
+[2026-01-07 20:15:43] Action: add
+[2026-01-07 20:15:43] Raw input: {"id_produk":13,"quantity":1}
+[2026-01-07 20:15:43] id_produk: 13, qty: 1, user_id: 5
+[2026-01-07 20:15:43] Product check result: {"stok":16}
+[2026-01-07 20:15:43] Item exists in cart: no
+[2026-01-07 20:15:43] Inserting new item to cart: id_user=5, id_produk=13, qty=1
+[2026-01-07 20:15:43] Insert executed: success, error: 
+[2026-01-07 20:15:43] Last insert ID: 30
+[2026-01-07 20:15:43] SUCCESS: New item added to cart
+[2026-01-07 20:15:43] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:15:43] Getting current user ID...
+[2026-01-07 20:15:43] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:15:43] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:15:43] Using logged-in user ID: 5
+[2026-01-07 20:15:43] Final user_id: 5
+[2026-01-07 20:15:43] Action: count
+[2026-01-07 20:15:44] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:15:44] Getting current user ID...
+[2026-01-07 20:15:44] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:15:44] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:15:44] Using logged-in user ID: 5
+[2026-01-07 20:15:44] Final user_id: 5
+[2026-01-07 20:15:44] Action: count
+[2026-01-07 20:15:44] === NEW REQUEST ==={"action":"get"}
+[2026-01-07 20:15:44] Getting current user ID...
+[2026-01-07 20:15:44] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:15:44] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:15:44] Using logged-in user ID: 5
+[2026-01-07 20:15:44] Final user_id: 5
+[2026-01-07 20:15:44] Action: get
+[2026-01-07 20:15:44] Getting cart items for user_id: 5
+[2026-01-07 20:15:44] Cart items count: 1
+[2026-01-07 20:15:44] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:15:44] Getting current user ID...
+[2026-01-07 20:15:44] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:15:44] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:15:44] Using logged-in user ID: 5
+[2026-01-07 20:15:44] Final user_id: 5
+[2026-01-07 20:15:44] Action: count
+[2026-01-07 20:17:30] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:17:30] Getting current user ID...
+[2026-01-07 20:17:30] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:17:30] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:17:30] Using logged-in user ID: 5
+[2026-01-07 20:17:30] Final user_id: 5
+[2026-01-07 20:17:30] Action: count
+[2026-01-07 20:17:30] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:17:30] Getting current user ID...
+[2026-01-07 20:17:30] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:17:30] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:17:30] Using logged-in user ID: 5
+[2026-01-07 20:17:30] Final user_id: 5
+[2026-01-07 20:17:30] Action: count
+[2026-01-07 20:17:32] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:17:32] Getting current user ID...
+[2026-01-07 20:17:32] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:17:32] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:17:32] Using logged-in user ID: 5
+[2026-01-07 20:17:32] Final user_id: 5
+[2026-01-07 20:17:32] Action: count
+[2026-01-07 20:17:32] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:17:32] Getting current user ID...
+[2026-01-07 20:17:32] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:17:32] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:17:32] Using logged-in user ID: 5
+[2026-01-07 20:17:32] Final user_id: 5
+[2026-01-07 20:17:32] Action: count
+[2026-01-07 20:17:35] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:17:35] Getting current user ID...
+[2026-01-07 20:17:35] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:17:35] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:17:35] Using logged-in user ID: 5
+[2026-01-07 20:17:35] Final user_id: 5
+[2026-01-07 20:17:35] Action: count
+[2026-01-07 20:17:35] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:17:35] Getting current user ID...
+[2026-01-07 20:17:35] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:17:35] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:17:35] Using logged-in user ID: 5
+[2026-01-07 20:17:35] Final user_id: 5
+[2026-01-07 20:17:35] Action: count
+[2026-01-07 20:17:45] === NEW REQUEST ==={"action":"get"}
+[2026-01-07 20:17:45] Getting current user ID...
+[2026-01-07 20:17:45] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:17:45] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:17:45] Using logged-in user ID: 5
+[2026-01-07 20:17:45] Final user_id: 5
+[2026-01-07 20:17:45] Action: get
+[2026-01-07 20:17:45] Getting cart items for user_id: 5
+[2026-01-07 20:17:45] Cart items count: 1
+[2026-01-07 20:17:45] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:17:45] Getting current user ID...
+[2026-01-07 20:17:45] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:17:45] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:17:45] Using logged-in user ID: 5
+[2026-01-07 20:17:45] Final user_id: 5
+[2026-01-07 20:17:45] Action: count
+[2026-01-07 20:17:45] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:17:45] Getting current user ID...
+[2026-01-07 20:17:45] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:17:45] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:17:45] Using logged-in user ID: 5
+[2026-01-07 20:17:45] Final user_id: 5
+[2026-01-07 20:17:45] Action: count
+[2026-01-07 20:17:51] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:17:51] Getting current user ID...
+[2026-01-07 20:17:51] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:17:51] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:17:51] Using logged-in user ID: 5
+[2026-01-07 20:17:51] Final user_id: 5
+[2026-01-07 20:17:51] Action: count
+[2026-01-07 20:17:51] === NEW REQUEST ==={"action":"get"}
+[2026-01-07 20:17:51] Getting current user ID...
+[2026-01-07 20:17:51] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:17:51] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:17:51] Using logged-in user ID: 5
+[2026-01-07 20:17:51] Final user_id: 5
+[2026-01-07 20:17:51] Action: get
+[2026-01-07 20:17:51] Getting cart items for user_id: 5
+[2026-01-07 20:17:51] Cart items count: 1
+[2026-01-07 20:17:51] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:17:51] Getting current user ID...
+[2026-01-07 20:17:51] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:17:51] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:17:51] Using logged-in user ID: 5
+[2026-01-07 20:17:51] Final user_id: 5
+[2026-01-07 20:17:51] Action: count
+[2026-01-07 20:22:22] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:22:22] Getting current user ID...
+[2026-01-07 20:22:22] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:22:22] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:22:22] Using logged-in user ID: 5
+[2026-01-07 20:22:22] Final user_id: 5
+[2026-01-07 20:22:22] Action: count
+[2026-01-07 20:22:22] === NEW REQUEST ==={"action":"get"}
+[2026-01-07 20:22:22] Getting current user ID...
+[2026-01-07 20:22:22] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:22:22] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:22:22] Using logged-in user ID: 5
+[2026-01-07 20:22:22] Final user_id: 5
+[2026-01-07 20:22:22] Action: get
+[2026-01-07 20:22:22] Getting cart items for user_id: 5
+[2026-01-07 20:22:22] Cart items count: 1
+[2026-01-07 20:22:22] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:22:22] Getting current user ID...
+[2026-01-07 20:22:22] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:22:22] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:22:22] Using logged-in user ID: 5
+[2026-01-07 20:22:22] Final user_id: 5
+[2026-01-07 20:22:22] Action: count
+[2026-01-07 20:22:27] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:22:27] Getting current user ID...
+[2026-01-07 20:22:27] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:22:27] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:22:27] Using logged-in user ID: 5
+[2026-01-07 20:22:27] Final user_id: 5
+[2026-01-07 20:22:27] Action: count
+[2026-01-07 20:22:27] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:22:27] Getting current user ID...
+[2026-01-07 20:22:27] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:22:27] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:22:27] Using logged-in user ID: 5
+[2026-01-07 20:22:27] Final user_id: 5
+[2026-01-07 20:22:27] Action: count
+[2026-01-07 20:22:29] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:22:29] Getting current user ID...
+[2026-01-07 20:22:29] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:22:29] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:22:29] Using logged-in user ID: 5
+[2026-01-07 20:22:29] Final user_id: 5
+[2026-01-07 20:22:29] Action: count
+[2026-01-07 20:22:29] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:22:29] Getting current user ID...
+[2026-01-07 20:22:29] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:22:29] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:22:29] Using logged-in user ID: 5
+[2026-01-07 20:22:29] Final user_id: 5
+[2026-01-07 20:22:29] Action: count
+[2026-01-07 20:22:34] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:22:34] Getting current user ID...
+[2026-01-07 20:22:34] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:22:34] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:22:34] Using logged-in user ID: 5
+[2026-01-07 20:22:34] Final user_id: 5
+[2026-01-07 20:22:34] Action: count
+[2026-01-07 20:22:34] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:22:34] Getting current user ID...
+[2026-01-07 20:22:34] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:22:34] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:22:34] Using logged-in user ID: 5
+[2026-01-07 20:22:34] Final user_id: 5
+[2026-01-07 20:22:34] Action: count
+[2026-01-07 20:24:38] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:24:38] Getting current user ID...
+[2026-01-07 20:24:38] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:24:38] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:24:38] Using logged-in user ID: 5
+[2026-01-07 20:24:38] Final user_id: 5
+[2026-01-07 20:24:38] Action: count
+[2026-01-07 20:24:38] === NEW REQUEST ==={"action":"count"}
+[2026-01-07 20:24:38] Getting current user ID...
+[2026-01-07 20:24:38] Session data: {"guest_id":96,"user":5,"user_id":5,"user_name":"salabim","username":"salambim","email":"salambim@example.com","role":"user","logged_in":true,"success":"\u2705 Login berhasil! Selamat datang salabim"}
+[2026-01-07 20:24:38] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:24:38] Using logged-in user ID: 5
+[2026-01-07 20:24:38] Final user_id: 5
+[2026-01-07 20:24:38] Action: count
+[2026-01-07 20:26:55] === NEW REQUEST === {"action":"count"}
+[2026-01-07 20:26:55] Getting current user ID...
+[2026-01-07 20:26:55] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:26:55] Using logged-in user ID: 5
+[2026-01-07 20:26:55] Final user_id: 5
+[2026-01-07 20:26:55] Action: count
+[2026-01-07 20:26:55] === NEW REQUEST === {"action":"count"}
+[2026-01-07 20:26:55] Getting current user ID...
+[2026-01-07 20:26:55] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:26:55] Using logged-in user ID: 5
+[2026-01-07 20:26:55] Final user_id: 5
+[2026-01-07 20:26:55] Action: count
+[2026-01-07 20:26:55] === NEW REQUEST === {"action":"count"}
+[2026-01-07 20:26:55] Getting current user ID...
+[2026-01-07 20:26:55] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:26:55] Using logged-in user ID: 5
+[2026-01-07 20:26:55] Final user_id: 5
+[2026-01-07 20:26:55] Action: count
+[2026-01-07 20:26:55] === NEW REQUEST === {"action":"count"}
+[2026-01-07 20:26:55] Getting current user ID...
+[2026-01-07 20:26:55] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:26:55] Using logged-in user ID: 5
+[2026-01-07 20:26:55] Final user_id: 5
+[2026-01-07 20:26:55] Action: count
+[2026-01-07 20:26:55] === NEW REQUEST === {"action":"count"}
+[2026-01-07 20:26:55] Getting current user ID...
+[2026-01-07 20:26:55] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:26:55] Using logged-in user ID: 5
+[2026-01-07 20:26:55] Final user_id: 5
+[2026-01-07 20:26:55] Action: count
+[2026-01-07 20:26:55] === NEW REQUEST === {"action":"count"}
+[2026-01-07 20:26:55] Getting current user ID...
+[2026-01-07 20:26:55] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:26:55] Using logged-in user ID: 5
+[2026-01-07 20:26:55] Final user_id: 5
+[2026-01-07 20:26:55] Action: count
+[2026-01-07 20:26:55] === NEW REQUEST === {"action":"count"}
+[2026-01-07 20:26:55] Getting current user ID...
+[2026-01-07 20:26:55] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:26:55] Using logged-in user ID: 5
+[2026-01-07 20:26:55] Final user_id: 5
+[2026-01-07 20:26:55] Action: count
+[2026-01-07 20:26:55] === NEW REQUEST === {"action":"count"}
+[2026-01-07 20:26:55] Getting current user ID...
+[2026-01-07 20:26:55] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:26:55] Using logged-in user ID: 5
+[2026-01-07 20:26:55] Final user_id: 5
+[2026-01-07 20:26:55] Action: count
+[2026-01-07 20:26:55] === NEW REQUEST === {"action":"count"}
+[2026-01-07 20:26:55] Getting current user ID...
+[2026-01-07 20:26:55] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:26:55] Using logged-in user ID: 5
+[2026-01-07 20:26:55] Final user_id: 5
+[2026-01-07 20:26:55] Action: count
+[2026-01-07 20:26:55] === NEW REQUEST === {"action":"count"}
+[2026-01-07 20:26:55] Getting current user ID...
+[2026-01-07 20:26:55] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:26:55] Using logged-in user ID: 5
+[2026-01-07 20:26:55] Final user_id: 5
+[2026-01-07 20:26:55] Action: count
+[2026-01-07 20:26:56] === NEW REQUEST === {"action":"count"}
+[2026-01-07 20:26:56] Getting current user ID...
+[2026-01-07 20:26:56] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:26:56] Using logged-in user ID: 5
+[2026-01-07 20:26:56] Final user_id: 5
+[2026-01-07 20:26:56] Action: count
+[2026-01-07 20:26:56] === NEW REQUEST === {"action":"count"}
+[2026-01-07 20:26:56] Getting current user ID...
+[2026-01-07 20:26:56] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:26:56] Using logged-in user ID: 5
+[2026-01-07 20:26:56] Final user_id: 5
+[2026-01-07 20:26:56] Action: count
+[2026-01-07 20:29:25] === NEW REQUEST === {"action":"get"}
+[2026-01-07 20:29:25] Getting current user ID...
+[2026-01-07 20:29:25] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:29:25] Using logged-in user ID: 5
+[2026-01-07 20:29:25] Final user_id: 5
+[2026-01-07 20:29:25] Action: get
+[2026-01-07 20:29:25] Getting cart items for user_id: 5
+[2026-01-07 20:29:25] Cart items count: 1
+[2026-01-07 20:29:25] === NEW REQUEST === {"action":"count"}
+[2026-01-07 20:29:25] Getting current user ID...
+[2026-01-07 20:29:25] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:29:25] Using logged-in user ID: 5
+[2026-01-07 20:29:25] Final user_id: 5
+[2026-01-07 20:29:25] Action: count
+[2026-01-07 20:29:25] === NEW REQUEST === {"action":"count"}
+[2026-01-07 20:29:25] Getting current user ID...
+[2026-01-07 20:29:25] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:29:25] Using logged-in user ID: 5
+[2026-01-07 20:29:25] Final user_id: 5
+[2026-01-07 20:29:25] Action: count
+[2026-01-07 20:29:32] === NEW REQUEST === {"action":"count"}
+[2026-01-07 20:29:32] Getting current user ID...
+[2026-01-07 20:29:32] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:29:32] Using logged-in user ID: 5
+[2026-01-07 20:29:32] Final user_id: 5
+[2026-01-07 20:29:32] Action: count
+[2026-01-07 20:29:32] === NEW REQUEST === {"action":"count"}
+[2026-01-07 20:29:32] Getting current user ID...
+[2026-01-07 20:29:32] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:29:32] Using logged-in user ID: 5
+[2026-01-07 20:29:32] Final user_id: 5
+[2026-01-07 20:29:32] Action: count
+[2026-01-07 20:29:33] === NEW REQUEST === {"action":"count"}
+[2026-01-07 20:29:33] Getting current user ID...
+[2026-01-07 20:29:33] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:29:33] Using logged-in user ID: 5
+[2026-01-07 20:29:33] Final user_id: 5
+[2026-01-07 20:29:33] Action: count
+[2026-01-07 20:29:33] === NEW REQUEST === {"action":"count"}
+[2026-01-07 20:29:33] Getting current user ID...
+[2026-01-07 20:29:33] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:29:33] Using logged-in user ID: 5
+[2026-01-07 20:29:33] Final user_id: 5
+[2026-01-07 20:29:33] Action: count
+[2026-01-07 20:29:37] === NEW REQUEST === {"action":"count"}
+[2026-01-07 20:29:37] Getting current user ID...
+[2026-01-07 20:29:37] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:29:37] Using logged-in user ID: 5
+[2026-01-07 20:29:37] Final user_id: 5
+[2026-01-07 20:29:37] Action: count
+[2026-01-07 20:29:37] === NEW REQUEST === {"action":"count"}
+[2026-01-07 20:29:37] Getting current user ID...
+[2026-01-07 20:29:37] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:29:37] Using logged-in user ID: 5
+[2026-01-07 20:29:37] Final user_id: 5
+[2026-01-07 20:29:37] Action: count
+[2026-01-07 20:32:11] === NEW REQUEST === {"action":"count"}
+[2026-01-07 20:32:11] Getting current user ID...
+[2026-01-07 20:32:11] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:32:11] Using logged-in user ID: 5
+[2026-01-07 20:32:11] Final user_id: 5
+[2026-01-07 20:32:11] Action: count
+[2026-01-07 20:32:11] === NEW REQUEST === {"action":"count"}
+[2026-01-07 20:32:11] Getting current user ID...
+[2026-01-07 20:32:11] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:32:11] Using logged-in user ID: 5
+[2026-01-07 20:32:11] Final user_id: 5
+[2026-01-07 20:32:11] Action: count
+[2026-01-07 20:32:12] === NEW REQUEST === {"action":"count"}
+[2026-01-07 20:32:12] Getting current user ID...
+[2026-01-07 20:32:12] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:32:12] Using logged-in user ID: 5
+[2026-01-07 20:32:12] Final user_id: 5
+[2026-01-07 20:32:12] Action: count
+[2026-01-07 20:32:12] === NEW REQUEST === {"action":"count"}
+[2026-01-07 20:32:12] Getting current user ID...
+[2026-01-07 20:32:12] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:32:12] Using logged-in user ID: 5
+[2026-01-07 20:32:12] Final user_id: 5
+[2026-01-07 20:32:12] Action: count
+[2026-01-07 20:32:13] === NEW REQUEST === {"action":"add"}
+[2026-01-07 20:32:13] Getting current user ID...
+[2026-01-07 20:32:13] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:32:13] Using logged-in user ID: 5
+[2026-01-07 20:32:13] Final user_id: 5
+[2026-01-07 20:32:13] Action: add
+[2026-01-07 20:32:13] Processing ADD action
+[2026-01-07 20:32:13] Raw input: {"id_produk":12,"quantity":1}
+[2026-01-07 20:32:13] Parsed input: {"id_produk":12,"quantity":1}
+[2026-01-07 20:32:13] id_produk: 12, qty: 1, user_id: 5
+[2026-01-07 20:32:13] Checking stock for product 12
+[2026-01-07 20:32:13] Product check result: {"stok":30}
+[2026-01-07 20:32:13] Checking if item exists in cart for user 5 and product 12
+[2026-01-07 20:32:13] Item exists in cart: no
+[2026-01-07 20:32:13] Inserting new item to cart
+[2026-01-07 20:32:13] SUCCESS: New item added to cart
+[2026-01-07 20:32:13] === NEW REQUEST === {"action":"count"}
+[2026-01-07 20:32:13] Getting current user ID...
+[2026-01-07 20:32:13] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:32:13] Using logged-in user ID: 5
+[2026-01-07 20:32:13] Final user_id: 5
+[2026-01-07 20:32:13] Action: count
+[2026-01-07 20:32:16] === NEW REQUEST === {"action":"get"}
+[2026-01-07 20:32:16] Getting current user ID...
+[2026-01-07 20:32:16] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:32:16] Using logged-in user ID: 5
+[2026-01-07 20:32:16] Final user_id: 5
+[2026-01-07 20:32:16] Action: get
+[2026-01-07 20:32:16] Getting cart items for user_id: 5
+[2026-01-07 20:32:16] Cart items count: 2
+[2026-01-07 20:32:16] === NEW REQUEST === {"action":"count"}
+[2026-01-07 20:32:16] Getting current user ID...
+[2026-01-07 20:32:16] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:32:16] Using logged-in user ID: 5
+[2026-01-07 20:32:16] Final user_id: 5
+[2026-01-07 20:32:16] Action: count
+[2026-01-07 20:32:16] === NEW REQUEST === {"action":"count"}
+[2026-01-07 20:32:16] Getting current user ID...
+[2026-01-07 20:32:16] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:32:16] Using logged-in user ID: 5
+[2026-01-07 20:32:16] Final user_id: 5
+[2026-01-07 20:32:16] Action: count
+[2026-01-07 20:32:48] === NEW REQUEST === {"action":"get"}
+[2026-01-07 20:32:48] Getting current user ID...
+[2026-01-07 20:32:48] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:32:48] Using logged-in user ID: 5
+[2026-01-07 20:32:48] Final user_id: 5
+[2026-01-07 20:32:48] Action: get
+[2026-01-07 20:32:48] Getting cart items for user_id: 5
+[2026-01-07 20:32:48] Cart items count: 2
+[2026-01-07 20:32:48] === NEW REQUEST === {"action":"count"}
+[2026-01-07 20:32:48] Getting current user ID...
+[2026-01-07 20:32:48] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:32:48] Using logged-in user ID: 5
+[2026-01-07 20:32:48] Final user_id: 5
+[2026-01-07 20:32:48] Action: count
+[2026-01-07 20:32:48] === NEW REQUEST === {"action":"count"}
+[2026-01-07 20:32:48] Getting current user ID...
+[2026-01-07 20:32:48] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:32:48] Using logged-in user ID: 5
+[2026-01-07 20:32:48] Final user_id: 5
+[2026-01-07 20:32:48] Action: count
+[2026-01-07 20:33:18] === NEW REQUEST === {"action":"count"}
+[2026-01-07 20:33:18] Getting current user ID...
+[2026-01-07 20:33:18] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:33:18] Using logged-in user ID: 5
+[2026-01-07 20:33:18] Final user_id: 5
+[2026-01-07 20:33:18] Action: count
+[2026-01-07 20:33:18] === NEW REQUEST === {"action":"get"}
+[2026-01-07 20:33:18] Getting current user ID...
+[2026-01-07 20:33:18] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:33:18] Using logged-in user ID: 5
+[2026-01-07 20:33:18] Final user_id: 5
+[2026-01-07 20:33:18] Action: get
+[2026-01-07 20:33:18] Getting cart items for user_id: 5
+[2026-01-07 20:33:18] Cart items count: 2
+[2026-01-07 20:33:18] === NEW REQUEST === {"action":"count"}
+[2026-01-07 20:33:18] Getting current user ID...
+[2026-01-07 20:33:18] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:33:18] Using logged-in user ID: 5
+[2026-01-07 20:33:18] Final user_id: 5
+[2026-01-07 20:33:18] Action: count
+[2026-01-07 20:36:03] === NEW REQUEST === {"action":"get"}
+[2026-01-07 20:36:03] Getting current user ID...
+[2026-01-07 20:36:03] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:36:03] Using logged-in user ID: 5
+[2026-01-07 20:36:03] Final user_id: 5
+[2026-01-07 20:36:03] Action: get
+[2026-01-07 20:36:03] Getting cart items for user_id: 5
+[2026-01-07 20:36:03] Cart items count: 2
+[2026-01-07 20:36:03] === NEW REQUEST === {"action":"count"}
+[2026-01-07 20:36:03] Getting current user ID...
+[2026-01-07 20:36:03] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:36:03] Using logged-in user ID: 5
+[2026-01-07 20:36:03] Final user_id: 5
+[2026-01-07 20:36:03] Action: count
+[2026-01-07 20:36:03] === NEW REQUEST === {"action":"count"}
+[2026-01-07 20:36:03] Getting current user ID...
+[2026-01-07 20:36:03] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 20:36:03] Using logged-in user ID: 5
+[2026-01-07 20:36:03] Final user_id: 5
+[2026-01-07 20:36:03] Action: count
+[2026-01-07 21:10:02] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:10:02] Getting current user ID...
+[2026-01-07 21:10:02] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:10:02] Using logged-in user ID: 5
+[2026-01-07 21:10:02] Final user_id: 5
+[2026-01-07 21:10:02] Action: count
+[2026-01-07 21:10:02] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:10:02] Getting current user ID...
+[2026-01-07 21:10:02] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:10:02] Using logged-in user ID: 5
+[2026-01-07 21:10:02] Final user_id: 5
+[2026-01-07 21:10:02] Action: count
+[2026-01-07 21:10:14] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:10:14] Getting current user ID...
+[2026-01-07 21:10:14] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:10:14] Using logged-in user ID: 5
+[2026-01-07 21:10:14] Final user_id: 5
+[2026-01-07 21:10:14] Action: count
+[2026-01-07 21:10:14] === NEW REQUEST === {"action":"get"}
+[2026-01-07 21:10:14] Getting current user ID...
+[2026-01-07 21:10:14] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:10:14] Using logged-in user ID: 5
+[2026-01-07 21:10:14] Final user_id: 5
+[2026-01-07 21:10:14] Action: get
+[2026-01-07 21:10:14] Getting cart items for user_id: 5
+[2026-01-07 21:10:14] Cart items count: 2
+[2026-01-07 21:10:14] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:10:14] Getting current user ID...
+[2026-01-07 21:10:14] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:10:14] Using logged-in user ID: 5
+[2026-01-07 21:10:14] Final user_id: 5
+[2026-01-07 21:10:14] Action: count
+[2026-01-07 21:10:16] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:10:16] Getting current user ID...
+[2026-01-07 21:10:16] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:10:16] Using logged-in user ID: 5
+[2026-01-07 21:10:16] Final user_id: 5
+[2026-01-07 21:10:16] Action: count
+[2026-01-07 21:10:16] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:10:16] Getting current user ID...
+[2026-01-07 21:10:16] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:10:16] Using logged-in user ID: 5
+[2026-01-07 21:10:16] Final user_id: 5
+[2026-01-07 21:10:16] Action: count
+[2026-01-07 21:10:23] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:10:23] Getting current user ID...
+[2026-01-07 21:10:23] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:10:23] Using logged-in user ID: 5
+[2026-01-07 21:10:23] Final user_id: 5
+[2026-01-07 21:10:23] Action: count
+[2026-01-07 21:10:23] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:10:23] Getting current user ID...
+[2026-01-07 21:10:23] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:10:23] Using logged-in user ID: 5
+[2026-01-07 21:10:23] Final user_id: 5
+[2026-01-07 21:10:23] Action: count
+[2026-01-07 21:10:32] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:10:32] Getting current user ID...
+[2026-01-07 21:10:32] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:10:32] Using logged-in user ID: 5
+[2026-01-07 21:10:32] Final user_id: 5
+[2026-01-07 21:10:32] Action: count
+[2026-01-07 21:10:32] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:10:32] Getting current user ID...
+[2026-01-07 21:10:32] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:10:32] Using logged-in user ID: 5
+[2026-01-07 21:10:32] Final user_id: 5
+[2026-01-07 21:10:32] Action: count
+[2026-01-07 21:10:36] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:10:36] Getting current user ID...
+[2026-01-07 21:10:36] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:10:36] Using logged-in user ID: 5
+[2026-01-07 21:10:36] Final user_id: 5
+[2026-01-07 21:10:36] Action: count
+[2026-01-07 21:10:36] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:10:36] Getting current user ID...
+[2026-01-07 21:10:36] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:10:36] Using logged-in user ID: 5
+[2026-01-07 21:10:36] Final user_id: 5
+[2026-01-07 21:10:36] Action: count
+[2026-01-07 21:10:37] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:10:37] Getting current user ID...
+[2026-01-07 21:10:37] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:10:37] Using logged-in user ID: 5
+[2026-01-07 21:10:37] Final user_id: 5
+[2026-01-07 21:10:37] Action: count
+[2026-01-07 21:10:37] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:10:37] Getting current user ID...
+[2026-01-07 21:10:37] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:10:37] Using logged-in user ID: 5
+[2026-01-07 21:10:37] Final user_id: 5
+[2026-01-07 21:10:37] Action: count
+[2026-01-07 21:11:57] === NEW REQUEST === {"action":"get"}
+[2026-01-07 21:11:57] Getting current user ID...
+[2026-01-07 21:11:57] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:11:57] Using logged-in user ID: 5
+[2026-01-07 21:11:57] Final user_id: 5
+[2026-01-07 21:11:57] Action: get
+[2026-01-07 21:11:57] Getting cart items for user_id: 5
+[2026-01-07 21:11:57] Cart items count: 2
+[2026-01-07 21:11:57] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:11:57] Getting current user ID...
+[2026-01-07 21:11:58] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:11:58] Using logged-in user ID: 5
+[2026-01-07 21:11:58] Final user_id: 5
+[2026-01-07 21:11:58] Action: count
+[2026-01-07 21:11:58] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:11:58] Getting current user ID...
+[2026-01-07 21:11:58] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:11:58] Using logged-in user ID: 5
+[2026-01-07 21:11:58] Final user_id: 5
+[2026-01-07 21:11:58] Action: count
+[2026-01-07 21:12:03] === NEW REQUEST === {"action":"get"}
+[2026-01-07 21:12:03] Getting current user ID...
+[2026-01-07 21:12:03] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:12:03] Using logged-in user ID: 5
+[2026-01-07 21:12:03] Final user_id: 5
+[2026-01-07 21:12:03] Action: get
+[2026-01-07 21:12:03] Getting cart items for user_id: 5
+[2026-01-07 21:12:03] Cart items count: 2
+[2026-01-07 21:12:03] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:12:03] Getting current user ID...
+[2026-01-07 21:12:03] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:12:03] Using logged-in user ID: 5
+[2026-01-07 21:12:03] Final user_id: 5
+[2026-01-07 21:12:03] Action: count
+[2026-01-07 21:12:03] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:12:03] Getting current user ID...
+[2026-01-07 21:12:03] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:12:03] Using logged-in user ID: 5
+[2026-01-07 21:12:03] Final user_id: 5
+[2026-01-07 21:12:03] Action: count
+[2026-01-07 21:12:05] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:12:05] Getting current user ID...
+[2026-01-07 21:12:05] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:12:05] Using logged-in user ID: 5
+[2026-01-07 21:12:05] Final user_id: 5
+[2026-01-07 21:12:05] Action: count
+[2026-01-07 21:12:05] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:12:05] Getting current user ID...
+[2026-01-07 21:12:05] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:12:05] Using logged-in user ID: 5
+[2026-01-07 21:12:05] Final user_id: 5
+[2026-01-07 21:12:05] Action: count
+[2026-01-07 21:12:07] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:12:07] Getting current user ID...
+[2026-01-07 21:12:07] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:12:07] Using logged-in user ID: 5
+[2026-01-07 21:12:07] Final user_id: 5
+[2026-01-07 21:12:07] Action: count
+[2026-01-07 21:12:07] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:12:07] Getting current user ID...
+[2026-01-07 21:12:07] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:12:07] Using logged-in user ID: 5
+[2026-01-07 21:12:07] Final user_id: 5
+[2026-01-07 21:12:07] Action: count
+[2026-01-07 21:12:10] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:12:10] Getting current user ID...
+[2026-01-07 21:12:10] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:12:10] Using logged-in user ID: 5
+[2026-01-07 21:12:10] Final user_id: 5
+[2026-01-07 21:12:10] Action: count
+[2026-01-07 21:12:10] === NEW REQUEST === {"action":"get"}
+[2026-01-07 21:12:10] Getting current user ID...
+[2026-01-07 21:12:10] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:12:10] Using logged-in user ID: 5
+[2026-01-07 21:12:10] Final user_id: 5
+[2026-01-07 21:12:10] Action: get
+[2026-01-07 21:12:10] Getting cart items for user_id: 5
+[2026-01-07 21:12:10] Cart items count: 2
+[2026-01-07 21:12:10] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:12:10] Getting current user ID...
+[2026-01-07 21:12:10] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:12:10] Using logged-in user ID: 5
+[2026-01-07 21:12:10] Final user_id: 5
+[2026-01-07 21:12:10] Action: count
+[2026-01-07 21:22:22] === NEW REQUEST === {"action":"get"}
+[2026-01-07 21:22:22] Getting current user ID...
+[2026-01-07 21:22:22] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:22:22] Using logged-in user ID: 5
+[2026-01-07 21:22:22] Final user_id: 5
+[2026-01-07 21:22:22] Action: get
+[2026-01-07 21:22:22] Getting cart items for user_id: 5
+[2026-01-07 21:22:22] Cart items count: 2
+[2026-01-07 21:22:22] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:22:22] Getting current user ID...
+[2026-01-07 21:22:22] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:22:22] Using logged-in user ID: 5
+[2026-01-07 21:22:22] Final user_id: 5
+[2026-01-07 21:22:22] Action: count
+[2026-01-07 21:22:22] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:22:22] Getting current user ID...
+[2026-01-07 21:22:22] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:22:22] Using logged-in user ID: 5
+[2026-01-07 21:22:22] Final user_id: 5
+[2026-01-07 21:22:22] Action: count
+[2026-01-07 21:22:30] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:22:30] Getting current user ID...
+[2026-01-07 21:22:30] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:22:30] Using logged-in user ID: 5
+[2026-01-07 21:22:30] Final user_id: 5
+[2026-01-07 21:22:30] Action: count
+[2026-01-07 21:22:30] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:22:30] Getting current user ID...
+[2026-01-07 21:22:30] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:22:30] Using logged-in user ID: 5
+[2026-01-07 21:22:30] Final user_id: 5
+[2026-01-07 21:22:30] Action: count
+[2026-01-07 21:22:32] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:22:32] Getting current user ID...
+[2026-01-07 21:22:32] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:22:32] Using logged-in user ID: 5
+[2026-01-07 21:22:32] Final user_id: 5
+[2026-01-07 21:22:32] Action: count
+[2026-01-07 21:22:32] === NEW REQUEST === {"action":"get"}
+[2026-01-07 21:22:32] Getting current user ID...
+[2026-01-07 21:22:32] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:22:32] Using logged-in user ID: 5
+[2026-01-07 21:22:32] Final user_id: 5
+[2026-01-07 21:22:32] Action: get
+[2026-01-07 21:22:32] Getting cart items for user_id: 5
+[2026-01-07 21:22:32] Cart items count: 2
+[2026-01-07 21:22:32] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:22:32] Getting current user ID...
+[2026-01-07 21:22:32] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:22:32] Using logged-in user ID: 5
+[2026-01-07 21:22:32] Final user_id: 5
+[2026-01-07 21:22:32] Action: count
+[2026-01-07 21:22:36] === NEW REQUEST === {"action":"get"}
+[2026-01-07 21:22:36] Getting current user ID...
+[2026-01-07 21:22:36] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:22:36] Using logged-in user ID: 5
+[2026-01-07 21:22:36] Final user_id: 5
+[2026-01-07 21:22:36] Action: get
+[2026-01-07 21:22:36] Getting cart items for user_id: 5
+[2026-01-07 21:22:36] Cart items count: 2
+[2026-01-07 21:22:36] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:22:36] Getting current user ID...
+[2026-01-07 21:22:36] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:22:36] Using logged-in user ID: 5
+[2026-01-07 21:22:36] Final user_id: 5
+[2026-01-07 21:22:36] Action: count
+[2026-01-07 21:22:36] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:22:36] Getting current user ID...
+[2026-01-07 21:22:36] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:22:36] Using logged-in user ID: 5
+[2026-01-07 21:22:36] Final user_id: 5
+[2026-01-07 21:22:36] Action: count
+[2026-01-07 21:22:44] === NEW REQUEST === {"action":"get"}
+[2026-01-07 21:22:44] Getting current user ID...
+[2026-01-07 21:22:44] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:22:44] Using logged-in user ID: 5
+[2026-01-07 21:22:44] Final user_id: 5
+[2026-01-07 21:22:44] Action: get
+[2026-01-07 21:22:44] Getting cart items for user_id: 5
+[2026-01-07 21:22:44] Cart items count: 2
+[2026-01-07 21:22:44] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:22:44] Getting current user ID...
+[2026-01-07 21:22:44] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:22:44] Using logged-in user ID: 5
+[2026-01-07 21:22:44] Final user_id: 5
+[2026-01-07 21:22:44] Action: count
+[2026-01-07 21:22:44] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:22:44] Getting current user ID...
+[2026-01-07 21:22:44] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:22:44] Using logged-in user ID: 5
+[2026-01-07 21:22:44] Final user_id: 5
+[2026-01-07 21:22:44] Action: count
+[2026-01-07 21:24:04] === NEW REQUEST === {"action":"get"}
+[2026-01-07 21:24:04] Getting current user ID...
+[2026-01-07 21:24:04] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:24:04] Using logged-in user ID: 5
+[2026-01-07 21:24:04] Final user_id: 5
+[2026-01-07 21:24:04] Action: get
+[2026-01-07 21:24:04] Getting cart items for user_id: 5
+[2026-01-07 21:24:04] Cart items count: 2
+[2026-01-07 21:24:04] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:24:04] Getting current user ID...
+[2026-01-07 21:24:04] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:24:04] Using logged-in user ID: 5
+[2026-01-07 21:24:04] Final user_id: 5
+[2026-01-07 21:24:04] Action: count
+[2026-01-07 21:24:04] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:24:04] Getting current user ID...
+[2026-01-07 21:24:04] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:24:04] Using logged-in user ID: 5
+[2026-01-07 21:24:04] Final user_id: 5
+[2026-01-07 21:24:04] Action: count
+[2026-01-07 21:24:06] === NEW REQUEST === {"action":"get"}
+[2026-01-07 21:24:06] Getting current user ID...
+[2026-01-07 21:24:06] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:24:06] Using logged-in user ID: 5
+[2026-01-07 21:24:06] Final user_id: 5
+[2026-01-07 21:24:06] Action: get
+[2026-01-07 21:24:06] Getting cart items for user_id: 5
+[2026-01-07 21:24:06] Cart items count: 2
+[2026-01-07 21:24:06] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:24:06] Getting current user ID...
+[2026-01-07 21:24:06] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:24:06] Using logged-in user ID: 5
+[2026-01-07 21:24:06] Final user_id: 5
+[2026-01-07 21:24:06] Action: count
+[2026-01-07 21:24:06] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:24:06] Getting current user ID...
+[2026-01-07 21:24:06] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:24:06] Using logged-in user ID: 5
+[2026-01-07 21:24:06] Final user_id: 5
+[2026-01-07 21:24:06] Action: count
+[2026-01-07 21:24:09] === NEW REQUEST === {"action":"get"}
+[2026-01-07 21:24:09] Getting current user ID...
+[2026-01-07 21:24:09] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:24:09] Using logged-in user ID: 5
+[2026-01-07 21:24:09] Final user_id: 5
+[2026-01-07 21:24:09] Action: get
+[2026-01-07 21:24:09] Getting cart items for user_id: 5
+[2026-01-07 21:24:09] Cart items count: 2
+[2026-01-07 21:24:09] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:24:09] Getting current user ID...
+[2026-01-07 21:24:09] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:24:09] Using logged-in user ID: 5
+[2026-01-07 21:24:09] Final user_id: 5
+[2026-01-07 21:24:09] Action: count
+[2026-01-07 21:24:09] === NEW REQUEST === {"action":"count"}
+[2026-01-07 21:24:09] Getting current user ID...
+[2026-01-07 21:24:09] get_user_info() returned: {"id":5,"role":"user","username":"salabim"}
+[2026-01-07 21:24:09] Using logged-in user ID: 5
+[2026-01-07 21:24:09] Final user_id: 5
+[2026-01-07 21:24:09] Action: count
