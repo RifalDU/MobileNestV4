@@ -1,246 +1,251 @@
 <?php
-require_once 'config.php';
-require_once 'includes/brand-logos.php';
-$page_title = "Beranda";
-include 'includes/header.php';
+/**
+ * MobileNestV4 - API Status Check & Quick Test
+ * 
+ * This file provides:
+ * - Server status check
+ * - Database connection test
+ * - Quick API endpoint testing
+ * - System information
+ */
+
+header('Content-Type: application/json');
+
+require_once 'config/Database.php';
+require_once 'config/Constants.php';
+
+// Get action from query string
+$action = $_GET['action'] ?? 'status';
+
+try {
+    switch ($action) {
+        case 'status':
+            // Server status check
+            $db = new Database();
+            $conn = $db->connect();
+            
+            $db_status = $conn ? 'Connected' : 'Failed';
+            $php_version = phpversion();
+            $current_time = date('Y-m-d H:i:s');
+            
+            echo json_encode([
+                'success' => true,
+                'status' => 'MobileNestV4 Backend - OK',
+                'version' => '1.0.0',
+                'php_version' => $php_version,
+                'current_time' => $current_time,
+                'database_status' => $db_status,
+                'api_base_url' => BASE_URL . '/api',
+                'endpoints' => [
+                    'auth' => BASE_URL . '/api/auth.php',
+                    'user' => BASE_URL . '/api/user.php',
+                    'produk' => BASE_URL . '/api/produk.php',
+                    'kategori' => BASE_URL . '/api/kategori.php',
+                    'transaksi' => BASE_URL . '/api/transaksi.php',
+                    'detail_transaksi' => BASE_URL . '/api/detail_transaksi.php',
+                    'pengiriman' => BASE_URL . '/api/pengiriman.php',
+                    'keranjang' => BASE_URL . '/api/keranjang.php',
+                    'order' => BASE_URL . '/api/order.php',
+                    'search' => BASE_URL . '/api/search.php',
+                    'analytics' => BASE_URL . '/api/analytics.php'
+                ],
+                'documentation' => [
+                    'overview' => 'SUMMARY_20_FILES.txt',
+                    'full_docs' => 'DOKUMENTASI_20_FILES.md',
+                    'developer_guide' => 'DEVELOPER_GUIDE.md',
+                    'checklist' => 'IMPLEMENTATION_CHECKLIST.md'
+                ]
+            ], JSON_PRETTY_PRINT);
+            break;
+            
+        case 'test':
+            // Quick test endpoint
+            $test_results = [
+                'timestamp' => date('Y-m-d H:i:s'),
+                'tests' => []
+            ];
+            
+            // Test database connection
+            $db = new Database();
+            $conn = $db->connect();
+            $test_results['tests']['database_connection'] = $conn ? 'PASS' : 'FAIL';
+            
+            // Test constants
+            $test_results['tests']['constants_loaded'] = defined('BASE_URL') ? 'PASS' : 'FAIL';
+            
+            // Test file includes
+            $test_results['tests']['config_files_exist'] = (
+                file_exists('config/Database.php') &&
+                file_exists('config/Constants.php')
+            ) ? 'PASS' : 'FAIL';
+            
+            $test_results['tests']['includes_files_exist'] = (
+                file_exists('includes/User.php') &&
+                file_exists('includes/Produk.php') &&
+                file_exists('includes/Kategori.php') &&
+                file_exists('includes/Transaksi.php') &&
+                file_exists('includes/DetailTransaksi.php') &&
+                file_exists('includes/Pengiriman.php') &&
+                file_exists('includes/Keranjang.php')
+            ) ? 'PASS' : 'FAIL';
+            
+            $test_results['tests']['api_files_exist'] = (
+                file_exists('api/user.php') &&
+                file_exists('api/produk.php') &&
+                file_exists('api/kategori.php') &&
+                file_exists('api/transaksi.php') &&
+                file_exists('api/detail_transaksi.php') &&
+                file_exists('api/pengiriman.php') &&
+                file_exists('api/keranjang.php') &&
+                file_exists('api/auth.php') &&
+                file_exists('api/order.php') &&
+                file_exists('api/search.php') &&
+                file_exists('api/analytics.php')
+            ) ? 'PASS' : 'FAIL';
+            
+            // Count passed tests
+            $passed = array_reduce($test_results['tests'], function($carry, $item) {
+                return $carry + ($item === 'PASS' ? 1 : 0);
+            }, 0);
+            
+            $total = count($test_results['tests']);
+            $test_results['summary'] = [
+                'total_tests' => $total,
+                'passed' => $passed,
+                'failed' => $total - $passed,
+                'status' => $passed === $total ? 'ALL TESTS PASSED' : 'SOME TESTS FAILED'
+            ];
+            
+            echo json_encode($test_results, JSON_PRETTY_PRINT);
+            break;
+            
+        case 'endpoints':
+            // List all endpoints
+            $endpoints = [
+                'Authentication' => [
+                    'POST /api/auth.php?action=register' => 'Register user',
+                    'POST /api/auth.php?action=login' => 'Login user',
+                    'POST /api/auth.php?action=logout' => 'Logout',
+                    'POST /api/auth.php?action=refresh' => 'Refresh token'
+                ],
+                'User Management' => [
+                    'GET /api/user.php?action=list' => 'Get all users',
+                    'GET /api/user.php?action=get&id=X' => 'Get user by ID',
+                    'POST /api/user.php?action=create' => 'Create user',
+                    'PUT /api/user.php?action=update&id=X' => 'Update user',
+                    'DELETE /api/user.php?action=delete&id=X' => 'Delete user'
+                ],
+                'Products' => [
+                    'GET /api/produk.php?action=list' => 'Get all products',
+                    'GET /api/produk.php?action=get&id=X' => 'Get product by ID',
+                    'GET /api/produk.php?action=kategori&id=X' => 'Get products by category',
+                    'GET /api/search.php?q=keyword' => 'Search products',
+                    'POST /api/produk.php?action=create' => 'Create product',
+                    'PUT /api/produk.php?action=update&id=X' => 'Update product',
+                    'DELETE /api/produk.php?action=delete&id=X' => 'Delete product'
+                ],
+                'Categories' => [
+                    'GET /api/kategori.php?action=list' => 'Get all categories',
+                    'GET /api/kategori.php?action=get&id=X' => 'Get category by ID',
+                    'POST /api/kategori.php?action=create' => 'Create category',
+                    'PUT /api/kategori.php?action=update&id=X' => 'Update category',
+                    'DELETE /api/kategori.php?action=delete&id=X' => 'Delete category'
+                ],
+                'Shopping Cart' => [
+                    'GET /api/keranjang.php?action=get&id=X' => 'Get user cart',
+                    'GET /api/keranjang.php?action=total&id=X' => 'Get cart total',
+                    'GET /api/keranjang.php?action=count&id=X' => 'Get cart item count',
+                    'POST /api/keranjang.php?action=add' => 'Add item to cart',
+                    'PUT /api/keranjang.php?action=update&id=X' => 'Update item quantity',
+                    'DELETE /api/keranjang.php?action=remove&id=X' => 'Remove item from cart',
+                    'DELETE /api/keranjang.php?action=clear&id=X' => 'Clear entire cart'
+                ],
+                'Orders' => [
+                    'POST /api/order.php?action=checkout' => 'Complete checkout',
+                    'GET /api/transaksi.php?action=get&id=X' => 'Get order details',
+                    'GET /api/transaksi.php?action=user&id=X' => 'Get user orders',
+                    'GET /api/transaksi.php?action=list' => 'Get all orders (admin)',
+                    'GET /api/detail_transaksi.php?action=order&id=X' => 'Get order items'
+                ],
+                'Shipping' => [
+                    'GET /api/pengiriman.php?action=transaksi&id=X' => 'Get shipping by order',
+                    'GET /api/pengiriman.php?action=timeline&id=X' => 'Get shipping timeline',
+                    'PUT /api/pengiriman.php?action=status&id=X' => 'Update shipping status'
+                ],
+                'Admin' => [
+                    'GET /api/analytics.php?action=summary' => 'Dashboard summary',
+                    'GET /api/analytics.php?action=sales' => 'Sales report',
+                    'GET /api/analytics.php?action=products' => 'Product analytics',
+                    'GET /api/analytics.php?action=users' => 'User analytics'
+                ]
+            ];
+            
+            echo json_encode([
+                'success' => true,
+                'total_endpoints' => array_sum(array_map('count', $endpoints)),
+                'endpoints' => $endpoints
+            ], JSON_PRETTY_PRINT);
+            break;
+            
+        case 'docs':
+            // Documentation links
+            echo json_encode([
+                'success' => true,
+                'documentation' => [
+                    'README' => [
+                        'file' => 'README_BACKEND.md',
+                        'description' => 'Backend overview and quick start'
+                    ],
+                    'Quick Summary' => [
+                        'file' => 'SUMMARY_20_FILES.txt',
+                        'description' => 'Quick reference of all 20 files'
+                    ],
+                    'Full Documentation' => [
+                        'file' => 'DOKUMENTASI_20_FILES.md',
+                        'description' => 'Complete API documentation with all methods'
+                    ],
+                    'Developer Guide' => [
+                        'file' => 'DEVELOPER_GUIDE.md',
+                        'description' => 'Implementation guide with examples and best practices'
+                    ],
+                    'Implementation Checklist' => [
+                        'file' => 'IMPLEMENTATION_CHECKLIST.md',
+                        'description' => 'Phase-by-phase development plan and checklist'
+                    ]
+                ],
+                'recommended_reading_order' => [
+                    '1. README_BACKEND.md - Overview',
+                    '2. SUMMARY_20_FILES.txt - Quick reference',
+                    '3. DEVELOPER_GUIDE.md - Examples',
+                    '4. DOKUMENTASI_20_FILES.md - Full details',
+                    '5. IMPLEMENTATION_CHECKLIST.md - Development plan'
+                ]
+            ], JSON_PRETTY_PRINT);
+            break;
+            
+        default:
+            echo json_encode([
+                'success' => false,
+                'message' => 'Unknown action',
+                'available_actions' => [
+                    'status' => 'System status check',
+                    'test' => 'Run quick tests',
+                    'endpoints' => 'List all endpoints',
+                    'docs' => 'Documentation links'
+                ],
+                'usage' => [
+                    'GET /index.php?action=status' => 'Check system status',
+                    'GET /index.php?action=test' => 'Run tests',
+                    'GET /index.php?action=endpoints' => 'List endpoints',
+                    'GET /index.php?action=docs' => 'Show documentation'
+                ]
+            ]);
+    }
+} catch (Exception $e) {
+    http_response_code(500);
+    echo json_encode([
+        'success' => false,
+        'message' => 'Error: ' . $e->getMessage()
+    ]);
+}
 ?>
-
-<style>
-.hero-section {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    padding: 80px 0;
-    color: white;
-}
-.hero-section h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 1.2;
-}
-.category-card {
-    background: white;
-    border-radius: 15px;
-    padding: 20px;
-    text-align: center;
-    transition: all 0.3s;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    text-decoration: none;
-    display: block;
-    height: 100%;
-}
-.category-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-}
-.category-card h5 {
-    color: #2c3e50;
-    margin: 10px 0 0 0;
-    font-weight: 600;
-}
-.category-logo {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #f8f9fa;
-    border-radius: 10px;
-    padding: 10px;
-}
-.category-logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
-}
-.product-badge {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
-    color: white;
-}
-.badge-bestseller { background: #f39c12; }
-.badge-hot { background: #e74c3c; }
-.badge-promo { background: #27ae60; }
-.product-card {
-    border: none;
-    border-radius: 15px;
-    overflow: hidden;
-    transition: all 0.3s;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
-    position: relative;
-}
-.product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
-}
-.product-card img {
-    height: 220px;
-    object-fit: contain;
-    padding: 20px;
-}
-.product-card .card-body {
-    padding: 20px;
-}
-.product-rating {
-    color: #f39c12;
-    font-size: 14px;
-}
-.btn-add-cart {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    border: none;
-    border-radius: 10px;
-    padding: 10px;
-    color: white;
-    font-weight: 600;
-    transition: all 0.3s;
-}
-.btn-add-cart:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(102,126,234,0.4);
-    color: white;
-}
-.section-title {
-    font-weight: 700;
-    color: #2c3e50;
-    margin-bottom: 30px;
-}
-</style>
-
-<!-- Hero Section -->
-<section class="hero-section">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-7">
-                <h1 class="mb-4">Temukan Smartphone<br>Terbaru di Mobile Nest</h1>
-                <p class="fs-5 mb-4">Dapatkan penawaran spesial untuk flagship terkini dan aksesori original.</p>
-                <div class="d-flex gap-3">
-                    <a href="<?php echo SITE_URL; ?>/produk/list-produk.php" class="btn btn-light btn-lg px-4 fw-bold">Beli Sekarang</a>
-                    <a href="#promo" class="btn btn-outline-light btn-lg px-4 fw-bold">Lihat Promo</a>
-                </div>
-            </div>
-            <div class="col-lg-5 text-center mt-5 mt-lg-0">
-                <img src="<?php echo SITE_URL; ?>/assets/images/logo.jpg" alt="MobileNest" class="img-fluid" style="max-height: 350px; filter: drop-shadow(0 10px 30px rgba(0,0,0,0.3));">
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Brand Categories -->
-<section class="py-5 bg-light">
-    <div class="container">
-        <div class="d-flex justify-content-between align-items-center mb-4">
-            <h2 class="section-title mb-0">Kategori Smartphone</h2>
-            <a href="<?php echo SITE_URL; ?>/produk/list-produk.php" class="text-decoration-none fw-bold">Lihat semua →</a>
-        </div>
-        <div class="row g-3">
-            <?php
-            $brands = ['Samsung', 'Xiaomi', 'Apple', 'OPPO', 'Vivo', 'Realme'];
-            foreach($brands as $brand):
-            ?>
-            <div class="col-6 col-md-4 col-lg-2">
-                <a href="<?php echo SITE_URL; ?>/produk/list-produk.php?brand=<?php echo urlencode($brand); ?>" class="category-card">
-                    <div class="category-logo">
-                        <img src="<?php echo get_brand_logo_url($brand); ?>" alt="<?php echo $brand; ?> Logo" loading="lazy" onerror="this.src='https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/smartphone.svg'">
-                    </div>
-                    <h5><?php echo $brand; ?></h5>
-                </a>
-            </div>
-            <?php endforeach; ?>
-        </div>
-    </div>
-</section>
-
-<!-- Featured Products -->
-<section class="py-5" id="promo">
-    <div class="container">
-        <div class="d-flex justify-content-between align-items-center mb-4">
-            <h2 class="section-title mb-0">Produk Unggulan</h2>
-            <a href="<?php echo SITE_URL; ?>/produk/list-produk.php" class="text-decoration-none fw-bold">Lihat semua →</a>
-        </div>
-        
-        <div class="row g-4">
-            <?php
-            $sql = "SELECT * FROM produk WHERE status_produk = 'Tersedia' ORDER BY tanggal_ditambahkan DESC LIMIT 8";
-            $result = mysqli_query($conn, $sql);
-            
-            $badges = ['Best Seller', 'Hot', 'Promo'];
-            $badge_classes = ['badge-bestseller', 'badge-hot', 'badge-promo'];
-            $index = 0;
-            
-            if (mysqli_num_rows($result) > 0) {
-                while ($row = mysqli_fetch_assoc($result)) {
-                    $gambar_path = "uploads/" . $row['gambar'];
-                    $img_src = (!empty($row['gambar']) && file_exists($gambar_path)) 
-                                ? SITE_URL . '/' . $gambar_path 
-                                : SITE_URL . '/assets/images/logo.jpg';
-                    
-                    $badge_index = $index % 3;
-            ?>
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="card product-card h-100">
-                    <?php if($index < 6): ?>
-                    <span class="product-badge <?php echo $badge_classes[$badge_index]; ?>"><?php echo $badges[$badge_index]; ?></span>
-                    <?php endif; ?>
-                    <img src="<?php echo $img_src; ?>" class="card-img-top" alt="<?php echo htmlspecialchars($row['nama_produk']); ?>">
-                    <div class="card-body">
-                        <h5 class="card-title" style="font-size: 16px; font-weight: 600; min-height: 48px;"><?php echo htmlspecialchars($row['nama_produk']); ?></h5>
-                        <div class="product-rating mb-2">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-half"></i>
-                        </div>
-                        <p class="fw-bold text-primary mb-3" style="font-size: 18px;">Rp <?php echo number_format($row['harga'], 0, ',', '.'); ?></p>
-                        <button class="btn btn-add-cart w-100">
-                            <i class="bi bi-cart-plus"></i> Tambah ke Keranjang
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <?php 
-                    $index++;
-                }
-            } else {
-                echo '<div class="col-12 text-center text-muted py-5">Belum ada produk tersedia.</div>';
-            }
-            ?>
-        </div>
-    </div>
-</section>
-
-<!-- Features Section -->
-<section class="py-5 bg-light">
-    <div class="container">
-        <div class="row text-center g-4">
-            <div class="col-md-4">
-                <div class="p-4">
-                    <i class="bi bi-truck" style="font-size: 48px; color: #667eea;"></i>
-                    <h5 class="mt-3 fw-bold">Gratis Ongkir</h5>
-                    <p class="text-muted">Pengiriman cepat dan aman</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="p-4">
-                    <i class="bi bi-shield-check" style="font-size: 48px; color: #667eea;"></i>
-                    <h5 class="mt-3 fw-bold">Garansi Resmi</h5>
-                    <p class="text-muted">Produk 100% original bergaransi</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="p-4">
-                    <i class="bi bi-headset" style="font-size: 48px; color: #667eea;"></i>
-                    <h5 class="mt-3 fw-bold">Dukungan 24/7</h5>
-                    <p class="text-muted">Tim siap membantu kapan pun</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<?php include 'includes/footer.php'; ?>
